@@ -1,0 +1,86 @@
+﻿
+
+
+<div id="gornji">
+    <a href="#/login" style="color:white; background-color:rgb(201,161,24)">Prijava</a>
+
+    <div ng-show="error" class="alert alert-danger">{{error}}</div>
+    <form name="form" ng-submit="login()" role="form">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <i class="fa fa-key"></i>
+            <input type="text" name="username" id="username" class="form-control" ng-model="username" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <i class="fa fa-lock"></i>
+            <input type="password" name="password" id="password" class="form-control" ng-model="password" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Login</button>
+            <img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        </div>
+    </form>
+
+
+    <ul>
+        <li>
+
+            <a href="#" style="color:white; background-color:rgb(201,161,24)">Registracija</a>
+        </li>
+    </ul>
+</div>
+<div id="nav1">
+    <img src="img/logo.png" />
+    <ul>
+        <li>
+            <a href="#" style="color:rgb(201,161,64);">Sportsko klađenje</a>
+            <a href="#">Klađenje uživo</a>
+            <a href="#">Zlatni  brojevi</a>
+            <a href="#">Casino uživo</a>
+            <a href="#">Casino  igre</a>
+        </li>
+    </ul>
+</div>
+<div id="nav2">
+    <ul>
+        <li>
+            <a href="#" style="color:gray;">Ponuda</a>
+            <a href="#" style="color:white;">Klađenje uživo</a>
+            <a href="#" style="color:white;">Rezultati</a>
+            <a href="#" style="color:white;">Statistika</a>
+        </li>
+    </ul>
+    <input type="text" placeholder="Pretraga ponude" style="float:right; padding:7px; margin-top:-49px; margin-right:8%;" />
+</div>
+<div id="lijevi">
+    <img src="img/p1.jpg" /><br />
+    <img src="img/p2.jpg" /><br />
+    <img src="img/p3.jpg" />
+</div>
+<div id="root">
+    <div class="container">
+        <tabs>
+            <pane title="Pluralization">
+
+                <div id="cssSlider">
+                    <div id="sliderImages">
+
+                        <div ng-repeat="banner in testBanners track by $index">
+                            <img ng-src="{{banner.FullImageUrl}}" />
+                        </div>
+                    </div>
+
+
+                </div>
+            </pane>
+        </tabs>
+    </div>
+</div>
+<div id="desni">
+    <img src="img/p1.jpg" /><br />
+    <img src="img/p2.jpg" /><br />
+    <img src="img/p3.jpg" />
+</div>
